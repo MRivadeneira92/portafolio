@@ -1,0 +1,24 @@
+#home {
+    background-color: lightcyan;
+}
+
+nav {
+    background-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: lightgreen
+}
+
+section {
+    min-height: 1140px;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 200;
+}
