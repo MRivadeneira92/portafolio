@@ -17,11 +17,12 @@ html {
     border: 1px solid black;
     margin: 5px;
     background-color:lightblue;
-    
+    padding-bottom: 10%;
 }
 
 #home-text {
     padding-top: 20%;
+    padding-bottom: 0 !important;
 }
 
 #home-text p {
@@ -35,4 +36,9 @@ h1 {
 }
 
 main {
+    height: 100%;
+}
+
+nav {
+    background-color: transparent;
 }
