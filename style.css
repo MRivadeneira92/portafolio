@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "poppins";
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(./fonts/Poppins-Medium.ttf);
+}
 #home {
     background-color: lightcyan;
 }
@@ -21,4 +32,6 @@ section {
 h1 {
     font-size: 100px;
     font-weight: 200;
+    text-transform: uppercase;
 }
+
