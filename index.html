@@ -29,42 +29,52 @@
             </div>
         </nav>
         <div id="homepage" class="container-fluid page h-100">
-            <div id="home-text" class="d-flex">
-                <header>
-                    <h2>Hello</h2>
-                </header>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu ex lacus. Nulla cursus auctor elit, non faucibus nisl pellentesque nec. 
-                    Nam vehicula tincidunt velit non venenatis. Pellentesque vel mauris tortor. Maecenas vitae nunc purus. Phasellus aliquet malesuada ligula, 
-                    vitae pulvinar enim. Pellentesque posuere tempus aliquam</p>
-            </div>
-        </div>
-        <!-- proyects content
-        <div id="proyects" class="container-fluid page">
-            <h2>Here is part of my work</h2>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-4">
-                        <p>Max Copland</p>
-                        <a href="http://www.maxcopland.com">
-                            <img src="./img/demo01.JPG" alt="max copland demo" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-4">
-                        <p>The need for a light</p>
-                        <a href="#">
-                            <img src="./img/demo02.JPG" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-4">
-                        <p>Lorem ipsum</p>
-                        <a href="#">
-                            <img src="./img/demo03.JPG" alt="" class="img-fluid">
-                        </a>
-                    </div>
+            <!--Web page content-->
+            <div class="content">
+                <div id="home-text">
+                    <header>
+                        <h2>Hello</h2>
+                    </header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu ex lacus. Nulla cursus auctor elit, non faucibus nisl pellentesque nec. 
+                        Nam vehicula tincidunt velit non venenatis. Pellentesque vel mauris tortor. Maecenas vitae nunc purus. Phasellus aliquet malesuada ligula, 
+                        vitae pulvinar enim. Pellentesque posuere tempus aliquam</p>
                 </div>
+                <div class="skills">
+
+                </div>
+                <div class="contact">
+                    <!--
+                        Social media links
+                        link for sending email
+                    -->
+                </div>
+                <div id="proyects" class="container-fluid page">
+                    <h2>Here is part of my work</h2>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-4">
+                                <p>Max Copland</p>
+                                <a href="http://www.maxcopland.com">
+                                    <img src="./img/demo01.JPG" alt="max copland demo" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <p>The need for a light</p>
+                                <a href="#">
+                                    <img src="./img/demo02.JPG" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <p>Lorem ipsum</p>
+                                <a href="#">
+                                    <img src="./img/demo03.JPG" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
-        -->
+
     </main>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -84,7 +94,9 @@
 
     btnHome.addEventListener("click", function() {
         document.getElementById("proyects").style.display="none";
-        document.getElementById("homepage").style.display="block";
+        document.getElementById("contact").style.display="none";
+        document.getElementById("skills").style.display="none";
+        document.getElementById("home-text").style.display="block";
     });
 
     btnSkills.addEventListener("click", function() {
@@ -92,7 +104,7 @@
     });
 
     btnProyects.addEventListener("click", function() {
-        document.getElementById("homepage").style.display="none";
+        document.getElementById("home-text").style.display="none";
         document.getElementById("proyects").style.display="block";
     })
   </script>
