@@ -14,6 +14,10 @@ html {
     src: url(./fonts/Poppins-Medium.ttf);
 }
 
+.content {
+    padding-top: 10%;
+}
+
 .page {
     border: 1px solid black;
     margin: 5px;
@@ -22,7 +26,6 @@ html {
 }
 
 #home-text {
-    padding-top: 20%;
     padding-bottom: 0 !important;
 }
 
@@ -44,6 +47,6 @@ nav {
     background-color: transparent;
 }
 
-#proyects {
+#proyects, #skills, #contact {
     display: none;
 }

@@ -39,14 +39,25 @@
                         Nam vehicula tincidunt velit non venenatis. Pellentesque vel mauris tortor. Maecenas vitae nunc purus. Phasellus aliquet malesuada ligula, 
                         vitae pulvinar enim. Pellentesque posuere tempus aliquam</p>
                 </div>
-                <div class="skills">
+                <div id="skills">
 
                 </div>
-                <div class="contact">
+                <div id="contact">
                     <!--
                         Social media links
                         link for sending email
                     -->
+                    <p>You can send me a e-mail at: 
+                        maxrivadeneira92@gmail.com
+                        You can check my social media as well: 
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-4">A</div>
+                                <div class="col-4">B</div>
+                                <div class="col-4">C</div>
+                            </div>
+                        </div>
+                    </p>
                 </div>
                 <div id="proyects" class="container-fluid page">
                     <h2>Here is part of my work</h2>
@@ -101,11 +112,23 @@
 
     btnSkills.addEventListener("click", function() {
         document.getElementById("proyects").style.display="none";
+        document.getElementById("contact").style.display="none";
+        document.getElementById("skills").style.display="block";
+        document.getElementById("home-text").style.display="none";
     });
 
     btnProyects.addEventListener("click", function() {
-        document.getElementById("home-text").style.display="none";
         document.getElementById("proyects").style.display="block";
-    })
+        document.getElementById("contact").style.display="none";
+        document.getElementById("skills").style.display="none";
+        document.getElementById("home-text").style.display="none";
+    });
+
+    btnContact.addEventListener("click", function() {
+        document.getElementById("proyects").style.display="none";
+        document.getElementById("contact").style.display="block";
+        document.getElementById("skills").style.display="none";
+        document.getElementById("home-text").style.display="none";
+    });
   </script>
 </html>
