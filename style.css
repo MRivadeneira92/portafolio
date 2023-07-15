@@ -5,6 +5,16 @@
     font-family: "poppins";
 }
 
+.btn-nav:hover {
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item::after {
+    position: absolute;
+}
 html {
     height: 100%;
 }
