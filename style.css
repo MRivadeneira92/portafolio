@@ -54,6 +54,19 @@ main {
     height: 100%;
 }
 
+#nav-bar, #homepage {
+    animation-name: load-animations;
+    animation-duration: 2s;
+
+}
+
+@keyframes load-animations {
+    0% {
+        opacity: 0;
+    }
+
+    100% {opacity: 1;}
+}
 nav {
     background-color: transparent;
 }
@@ -79,11 +92,26 @@ nav {
 
 #welcome-page {
     text-align: center;
-    width: 100%;
+    padding:  10% 0;    
+    animation-name: welcome-animation;
+    animation-duration: 6s;
 }
 
+@keyframes welcome-animation {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+        transform:translateY(8px);
+    }
+    100% {
+        opacity: 0;
+    }
 
-#proyects, #skills, #contact {
+}
+
+#proyects, #skills, #contact, #nav-bar, #homepage{
     display: none;
 }
 
