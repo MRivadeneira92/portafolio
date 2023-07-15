@@ -5,34 +5,31 @@
     font-family: "poppins";
 }
 
+#body-display {
+    background-color: #84a98c;
+}
+
+.btn-nav {
+    transition: transform 0.3s !important;
+}
 .btn-nav:hover {
+    transform: translateY(-8px);
 }
 
-.nav-item {
-    position: relative;
+@keyframes down-click {
+    0% {}
+    40% {transform: translateY(9px);}
+    100%{transform: translateY(-1px);}
 }
-
-.nav-item::after {
-    position: absolute;
-}
-html {
-    height: 100%;
-}
-
-@font-face {
-    font-family: "poppins";
-    src: url(./fonts/Poppins-Medium.ttf);
+.btn-nav:active, .btn-nav:not(:hover) {
+    animation-name: down-click !important;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .content {
     padding-top: 10%;
-}
-
-.page {
-    border: 1px solid black;
-    margin: 5px;
-    background-color:lightblue;
-    padding-bottom: 10%;
 }
 
 #home-text {
@@ -41,6 +38,10 @@ html {
 
 #home-text p {
     width: 50%;
+}
+
+html {
+    height: 100%;
 }
 
 h1 {
@@ -56,7 +57,61 @@ main {
 nav {
     background-color: transparent;
 }
+.nav-item {
+    position: relative;
+}
+
+.nav-item::after {
+    position: absolute;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+
+.page {
+    border: 1px solid black;
+    margin: 5px;
+    background-color:lightblue;
+    padding-bottom: 10%;
+}
+
+#welcome-page {
+    text-align: center;
+    width: 100%;
+}
+
 
 #proyects, #skills, #contact {
     display: none;
 }
+
+
+.visible {
+    display: block !important;
+    opacity: 1;
+    transition: opacity 2s linear; 
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: display 0s 2s, opacity 2s linear; 
+}
+
+/* Paleta: 
+    606C38
+    283618
+    FEFAE0
+    DDA15E
+    BC6C25
+*/
+
+/* Paleta 2: 
+    cad2c5
+    84a98c
+    52796f
+    354f52
+    2f3e46
+*/
