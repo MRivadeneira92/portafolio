@@ -5,6 +5,12 @@
     font-family: "poppins";
 }
 
+html, body {
+    height: 100%;
+}
+.content {
+    height: 100%;
+}
 #body-display {
     background-color: #84a98c;
 }
@@ -32,6 +38,11 @@
     padding-top: 10%;
 }
 
+#container-text {
+    height: 100%;
+    padding: 7vh 5vh 5vh 5vh;
+}
+
 #home-text {
     padding-bottom: 0 !important;
 }
@@ -54,12 +65,6 @@ main {
     height: 100%;
 }
 
-#nav-bar, #homepage {
-    animation-name: load-animations;
-    animation-duration: 2s;
-
-}
-
 @keyframes load-animations {
     0% {
         opacity: 0;
@@ -78,6 +83,12 @@ nav {
     position: absolute;
 }
 
+#nav-bar, #homepage {
+    animation-name: load-animations;
+    animation-duration: 2s;
+
+}
+
 @font-face {
     font-family: "poppins";
     src: url(./fonts/Poppins-Medium.ttf);
@@ -85,7 +96,6 @@ nav {
 
 .page {
     border: 1px solid black;
-    margin: 5px;
     background-color:lightblue;
     padding-bottom: 10%;
 }
@@ -117,7 +127,7 @@ nav {
 
 
 .visible {
-    display: block !important;
+    display: flex !important;
     opacity: 1;
     transition: opacity 2s linear; 
 }
@@ -125,7 +135,7 @@ nav {
 .hidden {
     display: none;
     opacity: 0;
-    transition: display 0s 2s, opacity 2s linear; 
+    transition: display 0s 1s, opacity 1s linear; 
 }
 
 /* Paleta: 
