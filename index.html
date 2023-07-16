@@ -16,7 +16,7 @@
             <h1>Welcome</h1>
             <h2>Max Rivadeneira <span>Portfolio</span></h2>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light position-absolute" id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light position-absolute justify-content-between" id="nav-bar">
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
                     <p class="nav-item nav-link">EN</p>
@@ -133,12 +133,10 @@
     }
     btnHome.addEventListener("click", function() {
         textChange("home-text");
-        console.log(activeContent);
     });
 
     btnSkills.addEventListener("click", function() {
         textChange("skills");
-        console.log(activeContent);
     });
 
     btnProyects.addEventListener("click", function() {
@@ -161,12 +159,11 @@
                 if (document.getElementById(newContent).classList.contains("hidden")) {
                     document.getElementById(newContent).classList.remove("hidden");
                 };
-                document.getElementById(newContent).classList.add("visible");
                 activeContent = newContent; 
             }, 1500);
             setTimeout (()=> {
                 document.getElementById(newContent).classList.add("visible");
-            }, 3000);
+            }, 1600);
    
         }
     }

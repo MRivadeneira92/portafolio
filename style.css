@@ -127,9 +127,9 @@ nav {
 
 
 .visible {
-    display: flex !important;
-    opacity: 1;
-    transition: opacity 2s linear; 
+    display: block !important; 
+    animation-name: load-animations;
+    animation-duration: 1s;
 }
 
 .hidden {
