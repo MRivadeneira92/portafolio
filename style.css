@@ -83,8 +83,11 @@ main {
 
     100% {opacity: 1;}
 }
+
 nav {
     background-color: transparent;
+    padding-left: 5vh;
+    padding-right: 5vh;
 }
 .nav-item {
     position: relative;
