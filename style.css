@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: "poppins";
+    color: #202b31;
 }
 
 html, body {
@@ -27,10 +28,33 @@ h1 {
 main {
     height: 100%;
 }
+
 #body-display {
-    background-color: #84a98c;
+    background-color: #cad2c5;
 }
 
+header {
+    position: absolute; 
+    right: 1rem;
+    top: 1rem;
+}
+
+header h1 {
+    font-size: 4vh;
+    margin-bottom: 0;
+}
+header h2 {
+    font-size: 2vh;
+    margin-bottom: 0;
+}
+
+footer {
+    animation-name: load-animations;
+    animation-duration: 2s;
+}
+#homepage {
+    position: relative;
+}
 /* Buttons */ 
 
 .btn-nav {
@@ -58,7 +82,11 @@ main {
     100%{transform: translateY(-8px);}
 }
 
+/* Content */ 
 
+#proyects h2 {
+    text-align: center;
+}
 .content {
     padding-top: 10%;
 }
@@ -86,7 +114,7 @@ main {
 
 nav {
     background-color: transparent;
-    padding-left: 5vh;
+    padding-left: 3vh;
     padding-right: 5vh;
 }
 .nav-item {
@@ -100,7 +128,15 @@ nav {
 #nav-bar, #homepage {
     animation-name: load-animations;
     animation-duration: 2s;
+}
 
+#nav-bar div:first-of-type {
+    margin: 0 2vh;
+}
+
+#nav-lang {
+    position: absolute;
+    right: 2vh;
 }
 
 @font-face {
@@ -109,8 +145,8 @@ nav {
 }
 
 .page {
-    border: 1px solid black;
-    background-color:lightblue;
+    /* border: 1px solid black; */
+    background-color: #84a98c;
     padding-bottom: 10%;
 }
 
@@ -135,10 +171,9 @@ nav {
 
 }
 
-#proyects, #skills, #contact, #nav-bar, #homepage{
+#proyects, #skills, #contact, #nav-bar, #homepage, footer {
     display: none;
 }
-
 
 .visible {
     display: block !important; 

@@ -26,7 +26,7 @@
                 </div>   
             </div>
             <div class="collapse navbar-collapse">
-                <div class="navbar-nav">
+                <div class="navbar-nav" id="nav-lang">
                     <button class="nav-item nav-link">ES</button>
                     <button class="nav-item nav-link">EN</button>
                 </div>
@@ -34,12 +34,14 @@
         </nav>
         <div id="container-text">
             <div id="homepage" class="container-fluid page h-100">
+                <header>
+                    <h1>Max Rivadeneira</h1>
+                    <h2>Diseñador front-end</h2>
+                </header>
                 <!--Web page content-->
                 <div class="content">
                     <div id="home-text" class="visible">
-                        <header>
-                            <h2>Hola</h2>
-                        </header>
+                        <h2>Hola</h2>
                         <p>Vivo en Pamplona, España. Soy un diseñador front-end. El diseño web es un lienso impresionante para la expresión personal. 
                             Una página web cruza el arte con la información.
                         </p>
@@ -71,8 +73,8 @@
                             </div>
                         </p>
                     </div>
-                    <div id="proyects" class="container-fluid page">
-                        <h2>Here is part of my work</h2>
+                    <div id="proyects" class="container-fluid">
+                        <h2>Aquí hay parte de mi trabajo </h2>
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-4">
@@ -80,6 +82,10 @@
                                     <a href="http://www.maxcopland.com">
                                         <img src="./img/demo01.JPG" alt="max copland demo" class="img-fluid">
                                     </a>
+                                    <p>
+                                        Construido con WordPress usando Divi. <br>
+                                        También escribo música. 
+                                    </p>
                                 </div>
                                 <div class="col-4">
                                     <p>The need for a light</p>
@@ -98,8 +104,10 @@
                 </div>
             </div>
         </div>
-        
-
+        <footer id="footer">
+            <a href="#">Light</a>
+            <a href="#">Dark</a>
+        </footer>
     </main>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -128,8 +136,8 @@
             document.getElementById("nav-bar").style.display = "flex"
         }, 5300);
         setTimeout (()=> {
-
             document.getElementById("homepage").style.display = "flex";
+            document.getElementById("footer").style.display = "block";
         }, 5500);
 
     }
@@ -170,7 +178,6 @@
             setTimeout (()=> {
                 document.getElementById(newContent).classList.add("visible");
             }, 1600);
-   
         }
     }
 
