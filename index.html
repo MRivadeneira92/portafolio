@@ -220,12 +220,13 @@
         menuOn = 1;
         document.getElementById(activeContent).classList.add("hidden");
         document.getElementById("nav-bar-menu").classList.remove("collapse");
+        document.getElementById("nav-bar-menu").classList.add("visible");
         document.getElementById("container-header").style.webkitFilter = "blur(1px)";
         setTimeout(()=> {
             document.getElementById(activeContent).classList.remove("visible");
-        }, 1500);
+        }, 1800);
         setTimeout(()=> {
-
+            document.getElementById("nav-bar-menu").classList.add
         })
     }
 
