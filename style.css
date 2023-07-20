@@ -76,6 +76,29 @@ footer {
     transform: translateY(-8px);
 }
 
+#btn-small-menu {
+    margin-right: 2vh;
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #btn-small-menu {
+        margin-right: 2vh;
+        display: block;
+    }
+    #nav-bar {
+        display: none;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    #nav-bar-menu {
+        font-size: 6vh;
+    }
+}
+
 @keyframes down-click {
     0% {}
     40% {transform: translateY(9px);}
@@ -111,11 +134,12 @@ footer {
 
     100% {opacity: 1;}
 }
-
+/* nav bar */
 nav {
     background-color: transparent;
     padding-left: 3vh;
     padding-right: 5vh;
+    z-index: 1;
 }
 .nav-item {
     position: relative;

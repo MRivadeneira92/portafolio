@@ -16,8 +16,8 @@
             <h1>Bienvenido</h1>
             <h2>Max Rivadeneira <span>Portfolio</span></h2>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light position-absolute justify-content-end w-100" id="nav-bar">
-            <div class="collapse navbar-collapse pr-4">
+        <nav class="navbar navbar-expand-lg navbar-light position-absolute justify-content-end w-100 flex-column-sm" id="nav-bar">
+            <div class="collapse navbar-collapse pr-4 " id="nav-bar-menu">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link btn-nav btn-active" id="button-home">Principal</a>
                     <a class="nav-item nav-link btn-nav" id="button-skills">Habilidades</a>
@@ -31,10 +31,11 @@
                     <button class="nav-item nav-link">EN</button>
                 </div>
             </div>
+            <a href="#" id="btn-small-menu">B</a>
         </nav>
         <div id="container-text">
             <div id="homepage" class="container-fluid page h-100">
-                <header>
+                <header id="container-header">
                     <h1>Max Rivadeneira</h1>
                     <h2>Diseñador front-end</h2>
                 </header>
@@ -120,6 +121,8 @@
     let btnSkills;
     let btnProyects;
     let btnContact;
+    let btnMenu = document.getElementById("btn-small-menu");
+    let menuOn = 0;
     let activeContent = "home-text";
     let langPage = "Es"; 
     let activeButton = "button-home";
@@ -144,22 +147,42 @@
     btnHome.addEventListener("click", function() {
         textChange("home-text");
         buttonAnimate("button-home");
+        if (menuOn = 1) {
+            closeMenu();
+            menuOn = 0;
+        }
     });
 
     btnSkills.addEventListener("click", function() {
         textChange("skills");
         buttonAnimate("button-skills");
+        if (menuOn = 1) {
+            closeMenu();
+            menuOn = 0;
+        }
     });
 
     btnProyects.addEventListener("click", function() {
         textChange("proyects");
         buttonAnimate("button-proyects");
+        if (menuOn = 1) {
+            closeMenu();
+            menuOn = 0;
+        }
     });
 
     btnContact.addEventListener("click", function() {
         textChange("contact");
         buttonAnimate("button-contact");
+        if (menuOn = 1) {
+            closeMenu();
+            menuOn = 0;
+        }
     });
+
+    btnMenu.addEventListener("click", function(){
+        showMenu();
+    })
 
     //fades in and out the content on the page
     function textChange(newContent) {
@@ -181,6 +204,7 @@
         }
     }
 
+    // Un and down button animation
     function buttonAnimate(buttonName) {
         document.getElementById(buttonName).classList.add("btn-nav-action");
         document.getElementById(activeButton).classList.remove("btn-active");
@@ -190,5 +214,25 @@
             document.getElementById(buttonName).classList.add("btn-active");
         }, 1000);
     };
+
+    // Control small screen menu
+    function showMenu(){
+        menuOn = 1;
+        document.getElementById(activeContent).classList.add("hidden");
+        document.getElementById("nav-bar-menu").classList.remove("collapse");
+        document.getElementById("container-header").style.webkitFilter = "blur(1px)";
+        setTimeout(()=> {
+            document.getElementById(activeContent).classList.remove("visible");
+        }, 1500);
+        setTimeout(()=> {
+
+        })
+    }
+
+    // Close menu when button is pressed
+    function closeMenu(){
+        document.getElementById("nav-bar-menu").classList.add("collapse");
+        document.getElementById("container-header").style.webkitFilter = "blur(0)";
+    }
   </script>
 </html>
