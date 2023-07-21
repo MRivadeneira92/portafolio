@@ -142,12 +142,12 @@
             document.getElementById("homepage").style.display = "flex";
             document.getElementById("footer").style.display = "block";
         }, 5500);
-
     }
     btnHome.addEventListener("click", function() {
         textChange("home-text");
         buttonAnimate("button-home");
-        if (menuOn = 1) {
+        console.log("menuOn:" + menuOn);
+        if (menuOn == 1) {
             closeMenu();
             menuOn = 0;
         }
@@ -156,7 +156,7 @@
     btnSkills.addEventListener("click", function() {
         textChange("skills");
         buttonAnimate("button-skills");
-        if (menuOn = 1) {
+        if (menuOn == 1) {
             closeMenu();
             menuOn = 0;
         }
@@ -165,7 +165,7 @@
     btnProyects.addEventListener("click", function() {
         textChange("proyects");
         buttonAnimate("button-proyects");
-        if (menuOn = 1) {
+        if (menuOn == 1) {
             closeMenu();
             menuOn = 0;
         }
@@ -174,10 +174,9 @@
     btnContact.addEventListener("click", function() {
         textChange("contact");
         buttonAnimate("button-contact");
-        if (menuOn = 1) {
+        if (menuOn == 1) {
             closeMenu();
             menuOn = 0;
-            console.log(menuOn);
         }
     });
 
