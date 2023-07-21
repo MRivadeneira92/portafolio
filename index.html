@@ -16,7 +16,7 @@
             <h1>Bienvenido</h1>
             <h2>Max Rivadeneira <span>Portfolio</span></h2>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light position-absolute justify-content-end w-100 flex-column-sm" id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light position-absolute justify-content-end w-100" id="nav-bar">
             <div class="collapse navbar-collapse pr-4 " id="nav-bar-menu">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link btn-nav btn-active" id="button-home">Principal</a>
@@ -177,6 +177,7 @@
         if (menuOn = 1) {
             closeMenu();
             menuOn = 0;
+            console.log(menuOn);
         }
     });
 
@@ -233,6 +234,11 @@
     // Close menu when button is pressed
     function closeMenu(){
         document.getElementById("nav-bar-menu").classList.add("collapse");
+        document.getElementById("nav-bar-menu").classList.add("hidden");
+        setTimeout(()=> {
+            document.getElementById("nav-bar-menu").classList.remove("visible");
+            document.getElementById("nav-bar-menu").classList.remove("hidden");
+        }, 1800);
         document.getElementById("container-header").style.webkitFilter = "blur(0)";
     }
   </script>
