@@ -57,6 +57,7 @@ footer {
     animation-name: load-animations;
     animation-duration: 2s;
 }
+
 #homepage {
     position: relative;
 }
@@ -140,13 +141,16 @@ footer {
 
     100% {opacity: 1;}
 }
+
 /* nav bar */
+
 nav {
     background-color: transparent;
     padding-left: 3vh;
     padding-right: 5vh;
     z-index: 1;
 }
+
 .nav-item {
     position: relative;
 }
@@ -177,7 +181,9 @@ nav {
 
 #welcome-page {
     text-align: center;
-    padding:  10% 0;    
+    position: absolute;
+    top: 35%;
+    width: 100%;    
     animation-name: welcome-animation;
     animation-duration: 6s;
 }
@@ -238,6 +244,23 @@ nav {
     100% {
         filter: blur(0);
     }
+}
+
+.btn-small-active {
+    animation: side-select-on 2s forwards;
+}
+
+.btn-small-deactivaded {
+    animation: sile-select-off 2s forwards;
+}
+@keyframes side-select-on {
+    0% {};
+    100%{padding-left: 11vh};
+}
+
+@keyframes side-select-off {
+    0% {padding-left: 11vh};
+    100% {padding-left: 0};
 }
 
 /* Paleta: 

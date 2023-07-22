@@ -122,10 +122,11 @@
     let btnProyects;
     let btnContact;
     let btnMenu = document.getElementById("btn-small-menu");
-    let menuOn = 0;
+    let menuOn = false;
     let activeContent = "home-text";
     let langPage = "Es"; 
     let activeButton = "button-home";
+    let smallScreen = false; 
     btnHome = document.getElementById("button-home");
     btnSkills = document.getElementById("button-skills");
     btnProyects = document.getElementById("button-proyects");
@@ -142,41 +143,46 @@
             document.getElementById("homepage").style.display = "flex";
             document.getElementById("footer").style.display = "block";
         }, 5500);
+        if(window.innerWidth < 800) {
+            smallScreen = true;
+            btnHome.classList.remove("btn-active");
+            btnHome.classList.add("btn-small-active");
+        }
+        console.log(smallScreen);
     }
     btnHome.addEventListener("click", function() {
         textChange("home-text");
         buttonAnimate("button-home");
-        console.log("menuOn:" + menuOn);
-        if (menuOn == 1) {
+        if (menuOn == true) {
             closeMenu();
-            menuOn = 0;
+            menuOn = false;
         }
     });
 
     btnSkills.addEventListener("click", function() {
         textChange("skills");
         buttonAnimate("button-skills");
-        if (menuOn == 1) {
+        if (menuOn == true) {
             closeMenu();
-            menuOn = 0;
+            menuOn = false;
         }
     });
 
     btnProyects.addEventListener("click", function() {
         textChange("proyects");
         buttonAnimate("button-proyects");
-        if (menuOn == 1) {
+        if (menuOn == true) {
             closeMenu();
-            menuOn = 0;
+            menuOn = false;
         }
     });
 
     btnContact.addEventListener("click", function() {
         textChange("contact");
         buttonAnimate("button-contact");
-        if (menuOn == 1) {
+        if (menuOn == true) {
             closeMenu();
-            menuOn = 0;
+            menuOn = false;
         }
     });
 
@@ -206,18 +212,29 @@
 
     // Un and down button animation
     function buttonAnimate(buttonName) {
-        document.getElementById(buttonName).classList.add("btn-nav-action");
-        document.getElementById(activeButton).classList.remove("btn-active");
-        activeButton = buttonName;
-        setTimeout(()=> {
-            document.getElementById(buttonName).classList.remove("btn-nav-action");
-            document.getElementById(buttonName).classList.add("btn-active");
-        }, 1000);
+        if (smallScreen == false) {
+            document.getElementById(buttonName).classList.add("btn-nav-action");
+            document.getElementById(activeButton).classList.remove("btn-active");
+            activeButton = buttonName;
+            setTimeout(()=> {
+                document.getElementById(buttonName).classList.remove("btn-nav-action");
+                document.getElementById(buttonName).classList.add("btn-active");
+            }, 1000);
+        }
+        else {
+            document.getElementById(buttonName).classList.add("btn-small-active");
+            document.getElementById(activeButton).classList.add("btn-small-deactivated");
+            document.getElementById(activeButton).classList.remove("btn-small-active");
+            setTimeout(()=> {
+                document.getElementById(activeButton).classList.remove("btn-small-deactivated");
+                activeButton = buttonName;
+            }, 1000);
+        }
     };
 
     // Control small screen menu
     function showMenu(){
-        menuOn = 1;
+        menuOn = true;
         blur("container-header");
         document.getElementById(activeContent).classList.add("hidden");
         document.getElementById("nav-bar-menu").classList.remove("collapse");
@@ -252,6 +269,13 @@
             setTimeout(()=> {
                 document.getElementById(idName).classList.remove("blur-out");
             },2000);
+        }
+    }
+
+    function replaceSmallActive(idName) {
+        if(document.getElementById(idName).classList.contains("active")) {
+            document.getElementById(idName).classList.remove("active");
+            document.getElementById(idName).classList.add("btn-small-active");
         }
     }
   </script>
