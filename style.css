@@ -263,7 +263,7 @@ nav {
 }
 
 .btn-small-deactivaded {
-    animation: sile-select-off 2s forwards;
+    animation: side-select-off 2s forwards;
 }
 @keyframes side-select-on {
     0% {};

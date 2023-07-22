@@ -229,12 +229,13 @@
         }
         else {
             document.getElementById(buttonName).classList.add("btn-small-active");
-            document.getElementById(activeButton).classList.add("btn-small-deactivated");
             document.getElementById(activeButton).classList.remove("btn-small-active");
+            document.getElementById(activeButton).classList.add("btn-small-deactivaded");
             setTimeout(()=> {
-                document.getElementById(activeButton).classList.remove("btn-small-deactivated");
+                document.getElementById(activeButton).classList.remove("btn-small-active");
+                document.getElementById(activeButton).classList.remove("btn-small-deactivaded");
                 activeButton = buttonName;
-            }, 1000);
+            }, 2000);
         }
     };
 
