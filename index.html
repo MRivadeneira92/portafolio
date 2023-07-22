@@ -18,7 +18,7 @@
         </div>
         <nav class="navbar navbar-expand-lg navbar-light position-absolute justify-content-end w-100" id="nav-bar">
             <div class="collapse navbar-collapse pr-4 " id="nav-bar-menu">
-                <div class="navbar-nav">
+                <div class="navbar-nav" id="nav-container">
                     <a class="nav-item nav-link btn-nav btn-active" id="button-home">Principal</a>
                     <a class="nav-item nav-link btn-nav" id="button-skills">Habilidades</a>
                     <a class="nav-item nav-link btn-nav" id="button-proyects">Proyectos</a>
@@ -58,10 +58,6 @@
                         </ul>
                     </div>
                     <div id="contact">
-                        <!--
-                            Social media links
-                            link for sending email
-                        -->
                         <p>You can send me a e-mail at: 
                             maxrivadeneira92@gmail.com
                             You can check my social media as well: 
@@ -106,8 +102,8 @@
             </div>
         </div>
         <footer id="footer">
-            <a href="#">Light</a>
-            <a href="#">Dark</a>
+            <a href="#" id="btn-light-mode">Light</a>
+            <a href="#" id="btn-dark-mode">Dark</a>
         </footer>
     </main>
 
@@ -127,6 +123,8 @@
     let langPage = "Es"; 
     let activeButton = "button-home";
     let smallScreen = false; 
+    let btnLightMode = document.getElementById("btn-light-mode");
+    let btnDarkMode = document.getElementById("btn-dark-mode");
     btnHome = document.getElementById("button-home");
     btnSkills = document.getElementById("button-skills");
     btnProyects = document.getElementById("button-proyects");
@@ -188,6 +186,14 @@
 
     btnMenu.addEventListener("click", function(){
         showMenu();
+    })
+
+    btnLightMode.addEventListener("click", function() {
+        lightMode();
+    })
+
+    btnDarkMode.addEventListener("click", function() {
+        darkMode();
     })
 
     //fades in and out the content on the page
@@ -278,5 +284,10 @@
             document.getElementById(idName).classList.add("btn-small-active");
         }
     }
+
+    function darkMode() {
+        document.getElementById("body-display").classList.toggle("dark-mode");
+        document.getElementById("homepage").classList.toggle("dark-mode-page");
+        }
   </script>
 </html>

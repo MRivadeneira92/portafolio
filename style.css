@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     font-family: "poppins";
-    color: #202b31;
 }
 
 @font-face {
@@ -155,6 +154,10 @@ nav {
     position: relative;
 }
 
+.nav-bar {
+    --bs-navbar-color: blue;
+    --bs-navbar-hover-color: none;
+}
 .nav-item::after {
     position: absolute;
 }
@@ -218,6 +221,15 @@ nav {
     transition: display 0s 1s, opacity 1s linear; 
 }
 
+/* Light and dark mode */
+.dark-mode {
+    background-color: #354f52 !important;
+    color: #cad2c5 !important;
+}
+
+.dark-mode-page {
+    background-color: #2f3e46 !important;
+}
 /* Animations */ 
 
 .blur-in {
