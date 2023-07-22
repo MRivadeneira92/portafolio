@@ -218,10 +218,10 @@
     // Control small screen menu
     function showMenu(){
         menuOn = 1;
+        blur("container-header");
         document.getElementById(activeContent).classList.add("hidden");
         document.getElementById("nav-bar-menu").classList.remove("collapse");
         document.getElementById("nav-bar-menu").classList.add("visible");
-        document.getElementById("container-header").style.webkitFilter = "blur(1px)";
         setTimeout(()=> {
             document.getElementById(activeContent).classList.remove("visible");
         }, 1800);
@@ -232,13 +232,27 @@
 
     // Close menu when button is pressed
     function closeMenu(){
+        blur("container-header");
         document.getElementById("nav-bar-menu").classList.add("collapse");
         document.getElementById("nav-bar-menu").classList.add("hidden");
         setTimeout(()=> {
             document.getElementById("nav-bar-menu").classList.remove("visible");
             document.getElementById("nav-bar-menu").classList.remove("hidden");
         }, 1800);
-        document.getElementById("container-header").style.webkitFilter = "blur(0)";
+    }
+
+    //Control fade for header 
+    function blur(idName) {
+        if (!document.getElementById(idName).classList.contains("blur-in")) {
+            document.getElementById(idName).classList.add("blur-in");
+        }
+        else{
+            document.getElementById(idName).classList.remove("blur-in");
+            document.getElementById(idName).classList.add("blur-out");
+            setTimeout(()=> {
+                document.getElementById(idName).classList.remove("blur-out");
+            },2000);
+        }
     }
   </script>
 </html>
