@@ -3,12 +3,18 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "poppins";
+    font-family: "Playfair";
+    font-kerning: normal;
 }
 
 @font-face {
     font-family: "poppins";
     src: url(./fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Playfair";
+    src: url(./fonts/PlayfairDisplay-Medium.ttf);
 }
 
 html, body {
@@ -17,6 +23,15 @@ html, body {
 
 .content {
     height: 100%;
+}
+
+.content p {
+    font-size: 3vh;
+}
+
+.content img {
+    width: 30;
+    height: 30;
 }
 
 html {
