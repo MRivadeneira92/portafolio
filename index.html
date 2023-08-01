@@ -16,11 +16,11 @@
             <h1>Bienvenido</h1>
             <h2>Max Rivadeneira <span>Portfolio</span></h2>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light position-absolute justify-content-end w-100" id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-dark position-absolute justify-content-end w-100" id="nav-bar">
             <div class="collapse navbar-collapse pr-4 " id="nav-bar-menu">
                 <div class="navbar-nav" id="nav-container">
                     <a class="nav-item nav-link btn-nav btn-active" id="button-home">Principal</a>
-                    <a class="nav-item nav-link btn-nav" id="button-skills">Acerca de mi</a>
+                    <a class="nav-item nav-link btn-nav" id="button-about-me">Acerca de mi</a>
                     <a class="nav-item nav-link btn-nav" id="button-proyects">Proyectos</a>
                     <a class="nav-item nav-link btn-nav" id="button-contact">Contacto</a>   
                 </div>   
@@ -46,20 +46,23 @@
                         <div>
                             <img src="./icon/location.png" alt="location"><span>Pamplona, España</span>
                         </div>
-                        <p>Vivo en Pamplona, España. Soy un diseñador front-end. Me interesa crear experiencias accesibles e interesantes para 
+                        <p>
+                            Vivo en Pamplona, España. Soy un diseñador front-end. Me interesa crear experiencias accesibles e interesantes para 
                             los usuarios. Soy una persona dedicada, siempre enfocado en los detalles, en aprender y mejorar.
                         </p>
                     </div>
-                    <div id="skills">
+                    <div id="about-me">
                         <h2>Quien soy</h2>
                         <p>
                             Siempre tuve mucho interés por la programación. En 2022 finalmente di el salto y me inscribí en CS50X de Harvard,
                             en este curso me encanté con un universo nuevo e interesante.
-                            <br>
+                        </p>
+                        <p>
                             El curso se centró en varios lenguajes: C, SQL, Python, pero los que más me gustaron fueron los relacionados con
                             el diseño web. Armar una estructura con HTML, decorarla y animarla con CSS, darle vida con JavaScript. Una página
                             web puede ser una oportunidad para cruzar el arte con la funcionalidad, una herramiento que da paso a la creatividad.
-                            <br>
+                        </p>
+                        <p>
                             Mi camino está comenzando. En 2023 comencé una formación profesional de 560 horas de diseño web que añadieron a mi
                             caja de herramientas WordPress, WooComerce, Divi y Element.
                         </p>
@@ -80,7 +83,7 @@
                     <div id="proyects" class="container-fluid">
                         <h2>Aquí hay parte de mi trabajo </h2>
                         <div class="container-fluid">
-                            <div class="row">
+                            <div class="row text-center">
                                 <div class="col-4">
                                     <p>Max Copland</p>
                                     <a href="http://www.maxcopland.com">
@@ -120,7 +123,7 @@
   </body>
   <script>
     let btnHome; 
-    let btnSkills;
+    let btnAbout;
     let btnProyects;
     let btnContact;
     let btnMenu = document.getElementById("btn-small-menu");
@@ -132,7 +135,7 @@
     let darkModeStatus = false;
     let btnDarkMode = document.getElementById("btn-dark-mode");
     btnHome = document.getElementById("button-home");
-    btnSkills = document.getElementById("button-skills");
+    btnAbout = document.getElementById("button-about-me");
     btnProyects = document.getElementById("button-proyects");
     btnContact = document.getElementById("button-contact");
 
@@ -163,9 +166,9 @@
         }
     });
 
-    btnSkills.addEventListener("click", function() {
-        textChange("skills");
-        buttonAnimate("button-skills");
+    btnAbout.addEventListener("click", function() {
+        textChange("about-me");
+        buttonAnimate("button-about-me");
         if (menuOn == true) {
             closeMenu();
             menuOn = false;

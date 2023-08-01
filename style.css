@@ -5,6 +5,7 @@
     margin: 0;
     font-family: "Playfair";
     font-kerning: normal;
+    color: #d8f3dc;
 }
 
 @font-face {
@@ -23,6 +24,9 @@ html, body {
 
 .content {
     height: 100%;
+    width: 100%;
+    position: relative;  
+    top: 80px;  
 }
 
 .content p {
@@ -49,7 +53,7 @@ main {
 }
 
 #body-display {
-    background-color: #cad2c5;
+    background-color: #19212e;
 }
 
 header {
@@ -102,24 +106,6 @@ footer {
     display: none;
 }
 
-@media (max-width: 800px) {
-    #btn-small-menu {
-        margin-right: 2vh;
-        display: block;
-    }
-    #nav-bar {
-        display: none;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-    #nav-bar-menu {
-        font-size: 6vh;
-    }
-}
-
 @keyframes down-click {
     0% {}
     40% {transform: translateY(9px);}
@@ -128,30 +114,44 @@ footer {
 
 /* Content */ 
 
+#about-me {
+    padding-top: 3rem;
+}
+
+#about-me p {
+    width: 70%;
+    text-align: justify;
+    text-justify: inter-word;
+}
 #proyects h2 {
     text-align: center;
 }
-.content {
-    padding-top: 10%;
+
+.content p {
+    font-size: 16px;
 }
 
+.content h2 {
+    font-size: 30px;
+}
 #container-text {
     height: 100%;
     padding: 7vh 5vh 5vh 5vh;
 }
 
 #home-text {
-    padding-bottom: 0 !important;
+    padding-bottom: 50px !important;
+    position: absolute;
+    bottom: 50px;
 }
 
 #home-text p {
     width: 50%;
+    font-size: 16px;
 }
 
 @keyframes load-animations {
-    0% {
-        opacity: 0;
-    }
+    0% {opacity: 0;}
 
     100% {opacity: 1;}
 }
@@ -193,7 +193,7 @@ nav {
 
 .page {
     /* border: 1px solid black; */
-    background-color: #84a98c;
+    background-color: #364156;
     padding-bottom: 10%;
 }
 
@@ -217,10 +217,9 @@ nav {
     100% {
         opacity: 0;
     }
-
 }
 
-#proyects, #skills, #contact, #nav-bar, #homepage, footer {
+#proyects, #about-me, #contact, #nav-bar, #homepage, footer {
     display: none;
 }
 
@@ -237,6 +236,7 @@ nav {
 }
 
 /* Light and dark mode */
+
 .dark-mode {
     background-color: #354f52 !important;
     color: #cad2c5 !important;
@@ -245,6 +245,7 @@ nav {
 .dark-mode-page {
     background-color: #2f3e46 !important;
 }
+
 /* Animations */ 
 
 .blur-in {
@@ -288,6 +289,54 @@ nav {
 @keyframes side-select-off {
     0% {padding-left: 11vh};
     100% {padding-left: 0};
+}
+
+/* responsive */ 
+
+@media (max-width: 800px) {
+    #btn-small-menu {
+        margin-right: 2vh;
+        display: block;
+    }
+
+    #nav-bar {
+        display: none;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    #nav-bar-menu {
+        font-size: 6vh;
+    }
+
+    header {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .content {
+        position: relative;
+        padding-top: 38%; 
+        width: 100%;
+        text-align: center;
+    }
+
+    #home-text p {
+        width: 100%;
+    }
+
+    #about-me p {
+        width: 100%;
+    }
+
+    #home-text {
+        position: relative;
+    }
+
+    /* content */ 
 }
 
 /* Paleta: 
