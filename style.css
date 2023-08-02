@@ -145,6 +145,7 @@ footer {
 .content h2 {
     font-size: 30px;
 }
+
 #container-text {
     height: 100%;
     padding: 7vh 5vh 5vh 5vh;
@@ -159,6 +160,16 @@ footer {
 #home-text p {
     width: 50%;
     font-size: 16px;
+}
+
+#contact {
+    margin-top: 60px;
+    text-align: center;
+}
+
+#contact a {
+    text-decoration: none;
+    color: white;
 }
 
 @keyframes load-animations {
@@ -326,11 +337,17 @@ nav {
         text-align: center;
     }
 
-    #home-text p {
+    /* content */ 
+
+    #about-me p {
         width: 100%;
     }
 
-    #about-me p {
+    #contact {
+        margin-top: 0;
+    }
+
+    #home-text p {
         width: 100%;
     }
 
@@ -338,7 +355,6 @@ nav {
         position: relative;
     }
 
-    /* content */ 
 }
 
 /* Paleta: 
