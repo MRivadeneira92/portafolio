@@ -172,6 +172,9 @@ footer {
     color: white;
 }
 
+#contact a:hover {
+    font-style: italic;
+}
 @keyframes load-animations {
     0% {opacity: 0;}
 
@@ -312,6 +315,10 @@ nav {
         display: block;
     }
 
+    #homepage {
+        flex-direction: column;
+    }
+    
     #nav-bar {
         display: none;
         text-align: center;
@@ -326,19 +333,27 @@ nav {
     }
 
     header {
+        position: static;
+        padding-top: 1rem;
         text-align: center;
         font-size: 14px;
     }
 
     .content {
         position: relative;
-        padding-top: 38%; 
         width: 100%;
         text-align: center;
+        top: 1rem;
     }
 
     /* content */ 
 
+    #about-me {
+        padding-top: 0;
+    }
+    #about-me, #contact, #home-text, #proyects {
+
+    }
     #about-me p {
         width: 100%;
     }
@@ -353,6 +368,8 @@ nav {
 
     #home-text {
         position: relative;
+        bottom: 0;
+        padding-bottom: 0;
     }
 
 }
