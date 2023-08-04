@@ -39,16 +39,6 @@ html, body {
     height: 30;
 }
 
-html {
-    height: 100%;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 200;
-    text-transform: uppercase;
-}
-
 main {
     height: 100%;
     width: 100%;
@@ -56,6 +46,15 @@ main {
 
 #body-display {
     background-color: #19212e;
+}
+
+footer {
+    animation-name: load-animations;
+    animation-duration: 2s;
+}
+
+#homepage {
+    position: relative;
 }
 
 header {
@@ -73,13 +72,14 @@ header h2 {
     margin-bottom: 0;
 }
 
-footer {
-    animation-name: load-animations;
-    animation-duration: 2s;
+html {
+    height: 100%;
 }
 
-#homepage {
-    position: relative;
+h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
 #welcome-page {
@@ -175,6 +175,7 @@ footer {
 #contact a:hover {
     font-style: italic;
 }
+
 @keyframes load-animations {
     0% {opacity: 0;}
 
@@ -220,6 +221,14 @@ nav {
     /* border: 1px solid black; */
     background-color: #364156;
     padding-bottom: 10%;
+}
+
+#nav-mobile {
+    display: none;
+    text-align: end;
+    width: 100%;
+    padding-top: 2px;
+
 }
 
 @keyframes welcome-animation {
@@ -310,6 +319,7 @@ nav {
 /* responsive */ 
 
 @media (max-width: 800px) {
+
     #btn-small-menu {
         margin-right: 2vh;
         display: block;
@@ -326,6 +336,13 @@ nav {
         top: 50%;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+    }
+
+    #nav-mobile {
+        display: block;
+        position: absolute;
+        right: 2vh;
+        margin: 0;
     }
 
     #nav-bar-menu {
@@ -351,9 +368,11 @@ nav {
     #about-me {
         padding-top: 0;
     }
+
     #about-me, #contact, #home-text, #proyects {
 
     }
+
     #about-me p {
         width: 100%;
     }
